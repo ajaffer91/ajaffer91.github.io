@@ -188,11 +188,14 @@
     items: 1
   });
   
-  dayjs.extend(window.dayjs_plugin_relativeTime)
-  dayjs.extend(window.dayjs_plugin_advancedFormat)
+  dayjs.extend(window.dayjs_plugin_relativeTime);
+  dayjs.extend(window.dayjs_plugin_advancedFormat);
 
   var birthday = dayjs('1991-03-20');
-  $("#my-birthday").text(birthday.format('Do MMMM YYYY'))
-  $('#my-age').text(dayjs().from(birthday, true))
+  $("#my-birthday").text(birthday.format('Do MMMM YYYY'));
+  $('#my-age').text(dayjs().from(birthday, true));
+
+  var work_start = dayjs('2012-09-01');
+  $('.my-experience').text(dayjs().from(work_start, true));
 
 })(jQuery);
