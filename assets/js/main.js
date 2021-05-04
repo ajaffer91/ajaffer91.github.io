@@ -187,5 +187,12 @@
     loop: true,
     items: 1
   });
+  
+  dayjs.extend(window.dayjs_plugin_relativeTime)
+  dayjs.extend(window.dayjs_plugin_advancedFormat)
+
+  var birthday = dayjs('1991-03-20');
+  $("#my-birthday").text(birthday.format('Do MMMM YYYY'))
+  $('#my-age').text(dayjs().from(birthday, true))
 
 })(jQuery);
